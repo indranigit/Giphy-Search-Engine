@@ -6,6 +6,9 @@ var input = document.querySelector("input").value;
 getInput(input);
 });
 
+
+//The keyup event is fired when a key is released.
+//grabbing event e, which is the keycode of the key pressed
 var x = document.querySelector(".js-userinput");
 x.addEventListener("keyup", function(e) {
 var input = document.querySelector("input").value;
@@ -23,7 +26,9 @@ function getInput(item) {
   var url = "https://api.giphy.com/v1/gifs/search?q="+ query + "&api_key=SDEsWMHoj4DO7LFMxWFHlVJVkElcDm8h";
 
 // Create an XMLHttpRequest object
-
+//The XMLHttpRequest object can be used to exchange data with a web server behind the scenes. 
+//This means that it is possible to update parts of a web page, without reloading the whole page.
+  
 var GiphyAJAXCall = new XMLHttpRequest();
   
 //Send a request to the server using open() and send() methods
