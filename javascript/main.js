@@ -22,9 +22,11 @@ function getInput(item) {
   var query = item.split(' ').join('+')
   var url = "https://api.giphy.com/v1/gifs/search?q="+ query + "&api_key=SDEsWMHoj4DO7LFMxWFHlVJVkElcDm8h";
 
-// AJAX Request
+// Create an XMLHttpRequest object
 
 var GiphyAJAXCall = new XMLHttpRequest();
+  
+//Send a request to the server using open() and send() methods
 GiphyAJAXCall.open( 'GET', url );
 GiphyAJAXCall.send();
 
@@ -35,6 +37,10 @@ pushToDom(data)
 }
 
 // Showing the gifs
+
+//A common use of JSON is to exchange data to/from a web server.
+//When receiving data from a web server, the data is always a string.
+//Parse the data with JSON.parse(), and the data becomes a JavaScript object.
 
 function pushToDom(input) {
   var response = JSON.parse(input);
